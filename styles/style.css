@@ -1,0 +1,726 @@
+:root {
+    --gris-medio: #A8A9AF;
+    --naranja: #FC6403;
+    --gris-claro: #AAABAF;
+    --gris-oscuro: #3D3F3E;
+    --blanco: #FCFCFC;
+}
+
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--blanco);
+    color: var(--gris-oscuro);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--blanco);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 85px;
+}
+
+/* Logo */
+.logo img {
+    width: 150px;
+    margin-top: 5px;
+}
+
+/* Menú centrado */
+.menu {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--naranja);
+    transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+    color: var(--gris-oscuro);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Íconos (WhatsApp e Instagram) alineados a la derecha */
+.header-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.header-icons img {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.header-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsivo: Tablets y móviles */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+    }
+
+    /* Redes sociales a la izquierda */
+    .header-icons {
+        order: 1;
+    }
+
+    /* Logo centrado */
+    .logo {
+        order: 2;
+        margin: 0 auto;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+
+    /* Hamburguesa a la derecha */
+    .hamburger {
+        order: 3;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .hamburger span {
+        width: 25px;
+        height: 3px;
+        background-color: var(--gris-oscuro);
+        transition: all 0.3s ease;
+    }
+
+    /* Ocultar el menú por defecto */
+    .menu {
+        display: none;
+    }
+
+    /* Mostrar menú al abrir la hamburguesa */
+    .menu.open {
+        display: block;
+        position: absolute;
+        top: 85px;
+        left: 0;
+        width: 100%;
+        background-color: var(--blanco);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+        animation: slideDown 0.4s ease forwards;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 15px 0;
+        margin-left: 25px;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* BANNER */
+
+
+.banner {
+    position: relative;
+    height: 50vh;
+    background-image: url('img/FOTO2.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--blanco);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--gris);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    text-align: center;
+    max-width: 800px;
+    padding: 20px;
+    backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 15px;
+    color: var(--blanco);
+}
+
+.content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: var(--gris-oscuro);
+}
+
+.content p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    font-size: 24px;
+    color: var(--gris-oscuro);
+}
+
+.cta {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--naranja);
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+    background-color: var(--gris-claro)
+}
+
+
+/*/equipo*/
+.equipo-section {
+    padding: 40px 20px;
+}
+.equipo-title {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--naranja);
+    margin-bottom: 50px;
+    
+}
+
+
+.equipo-container {
+    display: flex;
+    justify-content: space-between; /* Asegura que se usará el espacio */
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 70%; /* O usa width: 100% */
+    margin: auto;
+}
+
+.miembro {
+    background: #fff;
+    width: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding-bottom: 15px;
+    flex: 1 1 250px; /* Crece y se adapta sin perder tamaño mínimo */
+    max-width: 280px; /* Limita el crecimiento */
+    
+    
+    
+}
+.miembro img {
+    width: 100%;
+    height: auto;
+    
+}
+.miembro h3 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+.miembro p {
+    font-size: 14px;
+    color: #666;
+    margin: 0 10px 10px;
+}
+.social-linkdn {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 10px;
+    width: 15%;
+    margin-left: 25px;
+}
+
+
+
+
+/* Footer Styles */
+.footer {
+    background-color: var(--gris-oscuro);
+    color: var(--blanco);
+    padding: 20px;
+    text-align: center;
+    border-top: 3px solid var(--naranja);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-contact h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--naranja);
+}
+
+.footer-contact p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.footer-contact a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-contact a:hover {
+    color: var(--naranja);
+    text-decoration: underline;
+}
+
+.footer-text p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--naranja);
+}
+
+.footer-credits p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.footer-credits a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-credits a:hover {
+    color: var(--naranja);
+    text-decoration: underline;
+}
+
+.whatsapp-icon{
+    width: 10%;
+}
+
+
+
+
+.mision-vision {
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: var(--gris-oscuro);
+    margin-bottom: 25px;
+    margin-top: 50px;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.caja {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    flex: 1 1 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    font-size: 2rem;
+    color: var(--gris-oscuro);
+}
+
+.icono img {
+    width: 60px;
+    height: 60px;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .contenedor {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .caja {
+        max-width: 90%;
+    }
+}
+
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 40px;
+    justify-content: center;
+    background-color: var(--gris-oscuro);
+    
+}
+
+.gallery-item {
+    flex: 1 1 calc(25% - 20px);
+    /* Cuatro imágenes por fila */
+    max-width: calc(25% - 20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/*quienes somos*/
+.quienes-somos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    max-width: 1100px;
+    margin: auto;
+}
+.texto {
+    width: 50%;
+    text-align: left;
+}
+.texto h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.texto p {
+    font-size: 20px;
+    color: #555;
+    margin: 20px 0;
+}
+.texto .btn-contacto {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #FA6708;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.btn-contacto:hover {
+    font-size: 15px;
+    background-color: #fa6908a7;
+}
+.imagen-quienes  {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+}
+.imagen-quienes img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+    .quienes-somos {
+        flex-direction: column;
+        text-align: center;
+    }
+    .texto, .imagen {
+        width: 100%;
+    }
+}
+
+/*proyecto*/
+.proyectos {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.proyectos h2 {
+    color: #f57c00; /* Naranja */
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+.contenedor-proyectos {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 0 auto;
+}
+
+.proyecto {
+    background-color: #fff;
+    border: 2px solid #f57c00; /* Naranja */
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(33.33% - 20px);
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.proyecto:hover {
+    transform: scale(1.05);
+}
+
+.proyecto img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.proyecto h3 {
+    color: #333;
+    margin: 10px 0;
+}
+
+.proyecto p {
+    color: #777;
+}
+
+@media (max-width: 768px) {
+    .proyecto {
+        width: calc(50% - 20px); /* Dos proyectos por fila */
+    }
+}
+
+@media (max-width: 480px) {
+    .proyecto {
+        width: 100%; /* Un proyecto por fila */
+    }
+}
+
+/*FORMULARIO*/
+.formulario {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+}
+
+.formulario-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px; /* Añadido para limitar el ancho */
+    margin: 0 auto; /* Centra el contenedor en la página */
+}
+
+.formulario-izquierda {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.formulario-izquierda h2 {
+    color: #f57c00; /* Naranja */
+    margin-bottom: 20px;
+}
+
+.formulario-izquierda label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.formulario-izquierda input,
+.formulario-izquierda textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.formulario-izquierda button {
+    background-color: #f57c00; /* Naranja */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formulario-izquierda button:hover {
+    background-color: #e65c00;
+    
+}
+
+.formulario-derecha {
+    flex: 1;
+    max-width: 300px; /* Ajustado para mejor visualización */
+    text-align: center;
+    padding: 20px;
+}
+
+.formulario-derecha img {
+    width: 100%; /* Hace que la imagen ocupe el 100% del contenedor */
+    max-width: 300px; /* Limita el tamaño máximo de la imagen */
+    height: auto; /* Mantiene la relación de aspecto */
+    margin-top: 20px; /* Añade un pequeño margen superior */
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .formulario-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .formulario-izquierda, .formulario-derecha {
+        width: 100%;
+        max-width: none; /* Permite que el ancho sea 100% en pantallas pequeñas */
+    }
+
+    .formulario-derecha img {
+        max-width: 200px; /* Reduce el tamaño de la imagen en pantallas pequeñas */
+    }
+}
+
+
+
+/*WSP*/
+/* Estilo del botón flotante de WhatsApp */
+.whatsapp-btn {
+    position: fixed; /* Fija el botón en la pantalla */
+    bottom: 20px;    /* Distancia desde el fondo de la pantalla */
+    right: 20px;     /* Distancia desde el lado derecho de la pantalla */
+    background-color: #25d366; /* Color verde de WhatsApp */
+    padding: 12px;
+    border-radius: 50%;  /* Mantiene el botón redondeado */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra suave para darle un efecto 3D */
+    transition: background-color 0.3s ease;
+    z-index: 9999;  /* Asegura que el botón esté encima de otros elementos */
+    display: flex;
+    flex-direction: column; /* Apilar el texto y la imagen */
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    width: 60px; /* Ajustado el tamaño general del contenedor */
+    height: 60px; /* Ajustado el tamaño general del contenedor */
+}
+
+.whatsapp-btn:hover {
+    background-color: #128c7e; /* Color más oscuro cuando el cursor pasa por encima */
+}
+
+.whatsapp-btn img {
+    width: 100px;  /* Imagen reducida al 30% del tamaño original */
+    height: auto; /* Mantiene la relación de aspecto de la imagen */
+}
+
