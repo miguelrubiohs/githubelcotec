@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página web profesional para una empresa de construcción.">
+    <meta name="author" content="Mirubiohs">
+    <title>Elcotec</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="styles/img/ELCOTEC.png" alt="Logo_empresa">
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#inicio">INICIO</a></li>
+                <li><a href="#vision">NOSOTROS</a></li>
+                <li><a href="#proyectos">PROYECTOS</a></li>
+                <li><a href="#vision">VISIÓN</a></li>
+                <li><a href="#equipo">EQUIPO</a></li>
+                <li><a href="#contacto">CONTACTO</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <a href="https://wa.me/XXXXXXXXXX" target="_blank">
+                <img src="styles/img/social.png" alt="WhatsApp">
+            </a>
+            <a href="https://instagram.com/tuempresa" target="_blank">
+                <img src="styles/img/instagram (1).png" alt="Instagram">
+            </a>
+        </div>
+    </header>
+
+    
+<!-- Botón de WhatsApp flotante con texto -->
+    <a href="https://wa.me/1234567890" class="whatsapp-btn" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+    </a>
+
+
+
+
+    <section class="banner">
+        <div class="overlay">
+            <div class="content">
+                <h1>Excelencia en construcción</h1>
+                <p>Construimos hogares para toda la vida.</p>
+                <a href="#contacto" class="cta">Contáctanos</a>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <section class="quienes-somos">
+        <div class="texto">
+            <h2>¿Quiénes somos?</h2>
+            <p>Somos un equipo apasionado que trabaja para hacer realidad grandes proyectos. Nuestro compromiso es ofrecer calidad, innovación y confianza en cada paso del camino.</p>
+            <a href="#contacto" class="btn-contacto">Contáctanos</a>
+        </div>
+        <div class="imagen-quienes">
+            <img src="styles/img/ELCOTEC.png" alt="Equipo de trabajo">
+        </div>
+    </section>
+    
+
+    <section class="gallery">
+        <div class="gallery-item" onclick="openModal(this)">
+            <img src="styles/img/img-emp/image1.jpeg" alt="Imagen 1">
+        </div>
+        <div class="gallery-item" onclick="openModal(this)">
+            <img src="styles/img/img-emp/image2.jpeg" alt="Imagen 2">
+        </div>
+        <!-- Repite para las 12 imágenes -->
+        <div class="gallery-item" onclick="openModal(this)">
+            <img src="styles/img/img-emp/image3.jpeg" alt="Imagen 2">
+        </div>
+        <div class="gallery-item" onclick="openModal(this)">
+            <img src="styles/img/img-emp/image4.jpeg" alt="Imagen 2">
+        </div>
+    </section>
+
+
+
+
+    <section class="mision-vision">
+        <h2>¿POR QUÉ TRABAJAR CON NOSOTROS?</h2>
+        <div class="contenedor">
+            <div class="caja">
+                <h3>MISIÓN</h3>
+                <div class="icono">
+                    <img src="styles/img/orientacion.png" alt="Misión">
+                </div>
+                <p>
+                    En nuestra empresa, nos dedicamos a convertir ideas en proyectos sólidos, brindando asesoramiento experto antes de construir, garantizando un diseño arquitectónico innovador y una ejecución de alta calidad. Nos comprometemos a ofrecer soluciones accesibles y personalizadas, asegurando que cada cliente reciba el mejor servicio en construcción, remodelación y desarrollo de proyectos a medida en Chile.                </p>
+            </div>
+            <div class="caja">
+                <h3>VISIÓN</h3>
+                <div class="icono">
+                    <img src="styles/img/vision.png" alt="Visión">
+                </div>
+                <p>
+                    Ser la empresa líder en el sector de la construcción y diseño arquitectónico en Chile, reconocida por nuestra excelencia, confianza y compromiso con la calidad. Buscamos transformar cada proyecto en una obra única, combinando innovación y funcionalidad, para que nuestros clientes vean materializados sus sueños con soluciones eficientes, sostenibles y al alcance de sus necesidades.                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <div class="gallery-item" onclick="openModal(this)">
+            <img src="styles/img/img-emp/image5.jpeg" alt="Imagen 2">
+        </div>
+        <div class="gallery-item" onclick="openModal(this)">
+            <img src="styles/img/img-emp/image6.jpeg" alt="Imagen 2">
+        </div>
+        <div class="gallery-item" onclick="openModal(this)">
+            <img src="styles/img/img-emp/image7.jpeg" alt="Imagen 2">
+        </div>
+        <div class="gallery-item" onclick="openModal(this)">
+            <img src="styles/img/img-emp/image8.jpeg" alt="Imagen 2">
+        </div>
+    </section>
+
+    <section class="proyectos">
+        <h2>Nuestros Proyectos</h2>
+        <div class="contenedor-proyectos">
+            <div class="proyecto">
+                <img src="styles/img/img-emp/image1.jpeg" alt="Proyecto 1">
+                <h3>Proyecto 1</h3>
+                <p>Descripción breve del proyecto 1.</p>
+            </div>
+            <div class="proyecto">
+                <img src="styles/img/img-emp/image2.jpeg" alt="Proyecto 2">
+                <h3>Proyecto 2</h3>
+                <p>Descripción breve del proyecto 2.</p>
+            </div>
+            <div class="proyecto">
+                <img src="styles/img/img-emp/image3.jpeg" alt="Proyecto 3">
+                <h3>Proyecto 3</h3>
+                <p>Descripción breve del proyecto 3.</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="equipo-section">
+        <h2 class="equipo-title">Conoce a <em>Nuestro Equipo</em></h2>
+        <div class="equipo-container">
+            <div class="miembro">
+                <img src="styles/img/IMG-PROJECTS/1.jpg" alt="Luis Piedra">
+                <h3>Luis Piedra</h3>
+                <p>CEO & Founder</p>
+                <div class="social-linkdn">
+                    <a href="#"><img src="styles/img/linkedin.png" alt=""></a>
+                </div>
+            </div>
+            <div class="miembro">
+                <img src="styles/img/IMG-PROJECTS/1.jpg" alt="Beatriz Camacho">
+                <h3>Beatriz Camacho</h3>
+                <p>Account Manager</p>
+                <div class="social-linkdn">
+                    <a href="#"><img src="styles/img/linkedin.png" alt=""></a>
+                </div>
+            </div>
+            <div class="miembro">
+                <img src="styles/img/IMG-PROJECTS/1.jpg" alt="Ricardo Rivera">
+                <h3>Ricardo Rivera</h3>
+                <p>Senior Marketing Consultant</p>
+                <div class="social-linkdn">
+                    <a href="#"><img src="styles/img/linkedin.png" alt=""></a>
+                </div>
+            </div>
+            <div class="miembro">
+                <img src="styles/img/IMG-PROJECTS/1.jpg" alt="Karen Gallego">
+                <h3>Karen Gallego</h3>
+                <p>Business Development Representative</p>
+                <div class="social-linkdn">
+                    <a href="#"><img src="styles/img/linkedin.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="formulario">
+        <div class="formulario-container">
+            <div class="formulario-izquierda">
+                <h2>Formulario de Contacto</h2>
+                <form action="#" method="post">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+    
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+    
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+    
+                    <button type="submit" class="btn-enviar">Enviar</button>
+                </form>
+            </div>
+            <div class="formulario-derecha">
+                <img class="img-form" src="styles/img/ELCOTEC.png" alt="">
+            </div>
+        </div>
+    </section>
+    
+
+    <div class="modal" id="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+    
+
+    
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Información del contacto -->
+            <div class="footer-contact">
+
+                <h3>Contacto</h3>
+                <p>Teléfono: <a href="tel:+56993251535">+56 9 9325 1535</a></p>
+
+            </div>
+    
+            <!-- Frase inspiradora -->
+            <div class="footer-text">
+                <p>Tu lo sueñas, nosotros lo construimos</p>
+            </div>
+            <a href="https://wa.me/XXXXXXXXXX" target="_blank" class="whatsapp-button">
+                <img src="styles/img/social.png" alt="WhatsApp" class="whatsapp-icon" />
+            </a>
+    
+            <!-- Créditos -->
+            <div class="footer-credits">
+                <p>Elcotec - Todos los derechos reservados</p>
+                <p>Creado por <a href="https://github.com/miguelrubiohs/miguelrubiohs" target="_blank">miguelrubiohs</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    
+
+
+
+    <script src="js/script.js"></script>
+</body>
+
+
+</html>
